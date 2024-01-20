@@ -1,0 +1,6 @@
+Questions: 
+What is CDNs?
+
+What is React.createElement();
+
+what is render in React?
