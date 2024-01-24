@@ -4,7 +4,7 @@ Theory -
 ● What is Emmet?
 
 > ***“Emmet is a plug in for many popular text editors which greatly improves HTML & CSS workflow:”***
-> 
+
 
 ● Difference between a Library and Framework?
 
@@ -85,3 +85,4 @@ Script Loading has 2 parts **Fetching an script** from the network ****and  **Ex
 - Can be used when the scripts are even dependent on each other.
     
     **HTML Parsing** happens and **parallelly** **Fetch Script**  when it done **HTML parsing**. It start to **Executes script.**
+![alt text](https://github.com/Aakarshit07/Namaste-React-Learning/blob/main/Assignments/assets/HTML%20Parser%20Async%20and%20Difer.png?raw=true))
