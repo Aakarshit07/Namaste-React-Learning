@@ -85,4 +85,190 @@ Script Loading has 2 parts **Fetching an script** from the network ****and  **Ex
 - Can be used when the scripts are even dependent on each other.
     
     **HTML Parsing** happens and **parallelly** **Fetch Script**  when it done **HTML parsing**. It start to **Executes script.**
+  
 ![alt text](https://github.com/Aakarshit07/Namaste-React-Learning/blob/main/Assignments/assets/HTML%20Parser%20Async%20and%20Difer.png?raw=true))
+
+# Igniting our App - 02
+
+# Theory Assignment:
+
+- What is package.json ?
+    
+    It is a Configuration file for npm.
+    
+
+● - What is `NPM`?
+
+ NPM is an package manage for JavaScript. It manages the node packages in our project.
+
+It keeps track of what dependencies are installed and what version it supports?, what dependencies are normal or dev? It has all configs about our project.
+
+● - What is `Parcel/Webpack`? Why do we need it?
+
+Parcel/Webpack both are bundlers. 
+
+Now question is what is bundlers ?
+
+Bundlers are the tool that help to build modern web app that help to do lots of things such has
+
+optimizing the app and providing extra features.
+
+What Parcel/Webpack does?  
+
+Example: Let say our project has files like script.js file, style.css, index.html etc.
+
+What Parcel does is that it takes all the files and bundled them together optimize them, so that Bowser can read then quickly while removing extra spaces. and other sorts of algorithms are included such as watcher algo, Hot Module  Replacement, 
+
+It also provide functionality of **Transpiles** the our code like arrow function and all, so older browser can read them. Parcel convert them to be able to support old browsers.
+
+Why we need them? 
+
+Because Parcel/Webpack provides so many functionalities that ease our work and optimize our web app,  **Transpiles our code. providing Development server so that we can test our web app as we built.**
+
+ ****
+
+● - What is `.parcel-cache`
+
+.parcel-cache is a folder which is made when we first run our webapp on local sever provided by parcel. so it has all the bundled files to optimize the web app performance. so if we make any changes in our app it will take less time to bundle our webapp and reflect it on our webapp. 
+
+● - What is `npx` ?
+
+npx is an package execute for node packages. to run any executable package we require npx.
+
+also help to run packages without installing them can we use for testing of different packages.
+
+● - What is difference between `dependencies` vs `devDependencies`
+
+- Dependencies are the node packages we install in our project than these installed packages called dependencies because we these packages are required to run our webapp.
+
+- Dev-Dependencies are the node packages we required only in the development phase of the application. and the are the packages that helps to build our webapp but without these packages we can deploy our webapp.
+
+● - What is Tree Shaking?
+
+**It** **statically analyzes all the imports and exports and remove everything that isn’t used.**
+
+It even works with dynamic imports as well as cross language such as it also removes all the unused classes from the CSS file.
+
+● - What is Hot Module Replacement?
+
+As we make changes in our code parcel automatically rebuild the changed file and update our app.
+
+What it does it replace the code or even css properties of a module and it doesn’t required  to refresh the pace it does it by updating the changed in the current state.
+
+ 
+● - List down your favorite 5 superpowers of Parcel and describe any 3 of them in your
+own words.
+
+1. HMR
+2. Tree Shacking 
+3. Image Optimization 
+4. Dev Server
+5. Differential Bundling
+
+HMR: It used to update the code for modules by replacing the new code and it does not refresh the page it only updates it in the current state of browser.
+
+Tree Shacking:
+
+It is sued to remove everything that is not being used, it even support cross language 
+
+like Removing CSS Properties which are not being used.
+
+Differential Bundling: Due to this it allows to support our web app for older browsers.
+
+How It does it: .
+
+It make different bundles that supports majority of the browsers. and when our web app encounter the older browser it automatically handles this and make a different bundle that support the older browsers.
+
+Example: 
+
+New browsers:
+
+`<script type="module" src="app.c9a6fe.js"></script>`
+
+Old browsers: 
+
+`<script nomodule="" src="app.f7d631.js"></script>`
+
+● - What is `.gitignore`? What should we add and not add into it?
+
+.gitIgnore is used to ignore the files that can be regenerated and files that cant be exosed to outside world 
+
+Files like 
+
+Node Modules can be re installed with the help of package.json config. while we deploy it.
+
+.parcel-cache not required as they are created always when we first run the build our our webapp.
+
+.env files as they contains environment variables that cant we exposed to outside world.
+
+● - What is the difference between `package.json` and `package-lock.json`
+
+package.json is a config file that keeps the track or our installed packages and dividing the dependencies into two type one is normal and other is dev.
+
+and the version or the current installed dependencies.
+
+package-lock.json contains the hashing key for each installed dependencies and keep track of exact package version. so that it does not create and inconsistencies  due the the newer version of installed packages.  also by using hashing it validated the authenticity when we install the new version of package that already exists.
+
+● - Why should I not modify `package-lock.json`?
+
+Because it can cause inconsistencies in our project.
+
+● - What is `node_modules` ? Is it a good idea to push that on git?
+
+Node modules are the install package files and its dependencies and those dependencies has other dependencies.  these  works as the database for the packages we install in our application. 
+
+● - What is the `dist` folder?
+
+● - What is `browserlists`
+
+It allows to configure our web app that what browser can 100% supports our webapp.
+
+if we give it that our webapp supports last 2  chrome version.
+
+then it means it 100% supports them and but other browser might be able to support or might not be able to.
+
+Read about dif bundlers: 
+
+vite, webpack, parcel
+
+● Read about Script types in html (MDN Docs)
+
+## Extra Questions:
+
+- Why this version are like this 12.4.2 ?
+12 -> is Major Version.
+4 -> is Mini Version.
+2 -> is patch.
+- Tilde (~) vs Caret (^) in package.json: What’s the Difference?
+
+<aside>
+💡 Caret (^) s used to specify a “compatible with most recent” version range.
+we’re saying that we want to use version 17.0.1 of the react package,
+and we're willing to accept any version greater than or equal to 17.0.1
+and less than 18.0.0. This allows us to receive patches, bug fixes,
+and minor version changes, but not major version changes.
+example:
+        {
+            "dependencies": {
+                "react": "^17.0.1" this version can go like 17.1.1, or 17.3.1 etc.. but not 18.0.0
+            }
+        }
+
+Tilde (~) is used to specify a “compatible with” version range.
+we’re saying that we want to use version 17.0.1 of the react package,
+and we're willing to accept any version greater than or equal to 17.0.1 and
+less than 17.1.0. This allows us to receive patches and bug fixes,
+but not minor or major version changes.
+example:
+        {
+            "dependencies": {
+                "react": "~17.0.1" this version can go like 17.0.2, or 17.0.3 etc.. but not 17.1.0
+            }
+        }
+
+</aside>
+
+- Why CDN links are not preferred to used?
+    
+    CDN link are not the preferred way to bring React and ReactDOM in our Project.
+    because CDN has to make network call and then get the data. also when the version of the React or any other package will update in future over and over then we also has to keep changing the URL of our CDN.
