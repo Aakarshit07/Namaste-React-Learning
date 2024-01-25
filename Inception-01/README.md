@@ -1,6 +1,5 @@
 # Namaste React 🚀⚛️
 
-
 # What Parcel is Doing?
 - Dev Build
 - Local Server
@@ -34,3 +33,148 @@ also .parcel-cache use by the dist folder and when there is a change it will be 
 # Why Production build takes more time than dev built?
 - because it do all the processing on our code. running all sorts of algoristhms and optmizating code, images optimization, compession, tree shaking, HMT, localserver, http, removing exta spaces, minification, bundling, etc.
 
+# Laying the foundation - 03
+
+# npm start is equivalent to npm run start.
+
+# npm run start behind seens executes the package parcel with index.html becasue we have configured it in our package.json. 
+
+# What does render() do?
+    React.createElement() creates an Object. 
+    When we do root.render(). The ReactDOM takes this object and converts it into 
+    a HTML Element and then push it to the Browser DOM. 
+    Push it Means that it replace everything present in the root element of index.html
+
+# ***** Good Practice: ************************************************************
+
+# A good practice for index.html:
+    <div id="root">
+        <h1>Not Rendred | Soul ✨</h1>
+    </div>
+    So where react is not able to render it properly. It will render this h1. 
+    We know it that there is problem with our render.
+
+# *********************************************************************************
+
+# React.createElement() is an Object and when it is rendred on browser it will be converted into HTML element
+
+# What is JSX?
+    JSX - is HTML-Like or XML-Like Syntax, but is not HTML in JS. 
+
+# How we create React Element in core React?
+    const heading = React.createElement(
+        "h1", 
+        {id: "heading"}, 
+        "Namaste React ✨🚀"
+    );
+
+# How you create React element using JSX?
+    const jsxHeading = <h1>Namaste React using JSX ✨🚀</h1>.
+
+# Is JSX a part of React ?
+    No, JSX is different and React is different.
+    JSX is a different Syntax, It helps to write code in React easily.
+
+# JSX - is HTML-Like or XML-Like Syntax, but is not HTML in JS.
+- Example: const jsxHeading = <h1 className="head">Namaste React using JSX ✨🚀</h1>
+
+# Following peice of code is valid JavaScript Code?(const jsxHeading = <h1 id="heading">Namaste React using JSX ✨🚀</h1>)
+    This is not Valid Pure JavaScript Code. JS engin can't read it.
+
+# Now then how it getting rendred on the browser?
+    JSX is 'Transpiled' before it reaches the JS Engine.
+
+# Who is Transpiling our JSX code?
+    Parcel is Doing it.
+
+# Does Parcel Does this by itself?
+    No, Parcel has package that is Babel. and Babel Transpile this JSX Code.
+
+# What is Transpileing?
+    It means that conveting the code into code that JS Engine can understand.     
+
+# Does Babel only Transpile JSX?
+    No, It converts modern ES6 Js into old JS that older browser can understand.
+
+# Babel is a JavaScript compiler.
+
+# This is a vaild JSX if it is in one line 
+- const jsxHeading = <h1 className="head">Namaste React using JSX ✨🚀</h1>;
+
+- To write it in JSX in multiple lines is wrap our JSX in parenthesis => ()
+- like this 
+    (<h1 className="head">
+        Namaste React using JSX ✨🚀
+    </h1>)
+- This helps babel to identify where our JSX is startign and where its ending.
+
+
+# React Component
+* There are two type of React Component.
+- Class Based Component - OLD
+- Functional Component - NEW
+
+# What is React Functional Component?
+- JavaScript Function that returns some peice of JSX or React Element.
+```
+    const HeadingComponent = () => {
+        return <h1>Namaste React From React Functional Component ✨🚀</h1>;
+    };
+``` 
+
+# What is Component Composition?
+- Adding React Component into the React Component is called Component Composition 
+- Example:
+```
+    Conponent 1:
+    const Title = () => <h1 id="heading">Namaste React Element✨🚀</h1>
+
+    Conponent 2:
+    const HeadingComponent = () => (
+        <div id="container">
+        <Title/>
+        <h1 className="head">Namaste React From React Functional Component ✨🚀</h1>
+        </div>
+    );
+```
+
+# In side of {} we can write any valid JS code. mostly we write evaluated (final result of JS expression) expressions in it.
+
+# How to insert React Element into another React Element?
+- Example:
+- React Element 1:
+```
+    const span = (
+        <span>I am Learning</span>
+    )
+
+```
+
+- React Element 2:
+```
+    const title = (
+        <h1 id="heading">
+            { span } 
+            Namaste React Element✨🚀
+        </h1>
+    );
+```
+
+# Note: inside {}
+* Suppose we are clling an API, but that api is Mellicious Script. Using this Someone trying to XSS (Cross Site Scripting) Attack.
+* Our JSX doesnt Blindly runs any script. 
+* JSX first Sanitize it and then runs it. 
+* Even when Mellicious Script is passed JSX it will escapes it.
+
+# We can also pass functions iside this {}
+```
+    const Title = () => <h1 id="heading">Namaste React Element✨🚀</h1>
+    
+    const HeadingComponent = () => (
+        <div id="container">
+            {Title()}
+            <h1 className="head">Namaste React From React Functional Component ✨🚀</h1>
+        </div>
+    );
+
+```
