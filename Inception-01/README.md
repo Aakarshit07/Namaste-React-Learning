@@ -178,3 +178,18 @@ also .parcel-cache use by the dist folder and when there is a change it will be 
     );
 
 ```
+
+# Talk is cheap, show me the code! - 04
+
+# What are props?
+- In Functional Component passing props is same as passing arguements in Javascript function.
+- props is an object. That has the arguements passed to the Functional component from other components/elements.
+
+
+# What is config driven UI?
+- Config driven UI is used to controll the UI bases on the configurations or the data coming from the backend api.
+example: 
+    we want our e-commers website to work in different places. so we wont we making different website right. so what we do is send data from the backend accoring to location of other configurations. accoding to the DATA our layout of website or UI changes. 
+
+# Why we need key in list in react?
+- Because if a list element doesnt has key then react will not know which element is new or old when adding or deleting the list items. Due to this react re render all the list elements. it decreases the performance of our website. So using key for list is must and it helps to identify which element is added or deleted. this also increases the performance of our website.
