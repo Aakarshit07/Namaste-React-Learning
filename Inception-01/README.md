@@ -193,3 +193,42 @@ example:
 
 # Why we need key in list in react?
 - Because if a list element doesnt has key then react will not know which element is new or old when adding or deleting the list items. Due to this react re render all the list elements. it decreases the performance of our website. So using key for list is must and it helps to identify which element is added or deleted. this also increases the performance of our website.
+
+# Let's get Hooked - 05
+
+# Type of Import/Export
+
+# Default Export/Import 
+- import <ComponentName> from <path>;
+- export default <ComponentName>;
+
+# Note: there can be only one default export in one file/component.
+
+# Named Export/Import 
+- import { <ComponentName> } from <path>;
+- export <ComponentName>;
+
+# Note: there can be any number of named export in one file/component.
+
+# Note: There can be both type of export in one file/component.
+- If you try to Export a same file/component it wont throw any error while EXPORTING.
+- If you try to Import a same file/component with both type of Import, it throws error while IMPORTING.
+
+# What are React Hooks?
+- Hooks are just Normal JS functions that has some extra features.
+- There are Different Tryp of Hooks present in React.
+
+# Some Mostly use Hooks are..
+- useState
+- useEffect
+
+# useState Hook
+- it is like a normal JS variable that is specifit to react.
+- Syntax : const [<VariableName>, <SetFunctionName>] = useState(<InitialValue>);
+- InitialValue can be an Array, Object, String, Number, Boolean,etc.
+
+# What useState Hooks do ?
+- I keeps the Data Layer and UI layer sync (closly tight).
+
+# Render ? 
+- Whenever the state variable updated react re-renders the components.
