@@ -5,7 +5,7 @@ import Body from "./components/Body";
 
 
 const AppLayout = () => {
-  return (
+  return (   
     <div className="app">
       <Header/>
       <Body />
@@ -13,5 +13,4 @@ const AppLayout = () => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-
 root.render(<AppLayout />);

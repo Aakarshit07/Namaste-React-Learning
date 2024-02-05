@@ -272,3 +272,76 @@ example:
     
     CDN link are not the preferred way to bring React and ReactDOM in our Project.
     because CDN has to make network call and then get the data. also when the version of the React or any other package will update in future over and over then we also has to keep changing the URL of our CDN.
+
+
+# Talk is cheap, show me the code! - 04
+
+## Assignment:
+
+# Is JSX mandatory for React?
+
+- No JSX is not mandatory we can write code without JSX. We only used JSX because it make writing the react in more readable and simpler way like we write HTML markup
+
+# Is ES6 mandatory for React?
+
+- No, we can write react without ES6, but writing React using ES6 makes things a lot easier and make code more readable.
+
+# {TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+
+- {TitleComponent}  is an valid JS expression. we can write the valid JS inside these  curlies. can even pass components
+- <TitleComponent/> is an React component that is self closing JSX component
+- <TitleComponent></TitleComponent> is also React JSX component but we also can pass children to it. all of thee are used according to the requirenment.
+
+# How can I write comments in JSX?
+
+- {/* This is how we write comments in JSX */}
+
+# What is <React.Fragment></React.Fragment> and <></> ?
+
+- <React.Fragment></React.Fragment> is used to wrap our react components while not adding an extra element to our DOM.
+- <React.Fragment></React.Fragment> is the Legacy way or making react fragment
+- <></>  is an shorter and newer way or making react fragment
+
+# What is Virtual DOM?
+
+- Virtual DOM is an Virtual Representation of an actual DOM. V-DOM is an object that stores all the information about elements like type of HTML element we want to create, What attributes it has etc..
+
+# What is Reconciliation in React?
+
+- The process of updating the DOM according to the current Virtual DOM  State.
+
+# What is React Fiber?
+
+- React Fiber is an new reconciler algorithm that deals with how react will update the changes made in the V-DOM.
+- Here’s, how it is done.
+- There are two phases in this part
+- Phase - 1, **Reconciliation**:
+    1. It first computes the list of changes made in the V-DOM, can also jump to other changes 
+    2. Then it lists all the computed changed and schedules them into chunks.
+- Phase - 2, **Commit:**
+    1. From the scheduled changes react can choose to render the set of specific changes.
+    2. Once changes are committed, React notifies the DOM to reflect the changes that were scheduled. 
+
+# Why we need keys in React? When do we need keys in React?
+
+- we need key for react lists because it helps react to identifies which React element is which.
+- To avoid any errors lets assume the scenario where we created the list and it doesn’t has id
+
+form the list we deleted an element.
+
+- if we new item to list then it can be possible that other list has filled the position of the deleted.
+- This can cause problem as like in our database they have different id and when we try to add an item list it will add it to wrong position.
+
+# Can we use index as keys in React?
+
+- Yes, we can. but it strictly not recommended not to used index as keys in React.
+
+# What is props in React? Ways to
+
+- props are the properties in react.
+- we can directly give props inside these curly {}
+- we can pass props from one component to other.
+
+# What is a Config Driven UI ?
+
+- Config Driven UI are the UIs Where UI is based of the data coming from the database or any api. etc.

@@ -88,10 +88,10 @@ also .parcel-cache use by the dist folder and when there is a change it will be 
     Parcel is Doing it.
 
 # Does Parcel Does this by itself?
-    No, Parcel has package that is Babel. and Babel Transpile this JSX Code.
+    No, Parcel has package that is Babel. Babel Transpile this JSX Code.
 
 # What is Transpileing?
-    It means that conveting the code into code that JS Engine can understand.     
+    It means that converting the JSX code into code that JS Engine can understand.     
 
 # Does Babel only Transpile JSX?
     No, It converts modern ES6 Js into old JS that older browser can understand.
@@ -106,7 +106,7 @@ also .parcel-cache use by the dist folder and when there is a change it will be 
     (<h1 className="head">
         Namaste React using JSX ✨🚀
     </h1>)
-- This helps babel to identify where our JSX is startign and where its ending.
+- This helps babel to identify where our JSX is starting and where its ending.
 
 
 # React Component
@@ -178,6 +178,48 @@ also .parcel-cache use by the dist folder and when there is a change it will be 
     );
 
 ```
+# Laying the foundation - 03
+
+# Assignment:
+
+## What is JSX?
+
+- JSX is HTML like or XML like syntax, that is the extension for JavaScript syntax. it let us write HTML like syntax/markup in JavaScript.
+
+## Superpowers of JSX?
+
+- Allows developers to easily write HTML markup and CSS and JavaScript altogether with better and easy syntax.
+- Make easy to maintain code in JSX syntax
+- Also allows you to compose components
+- Allow Reusability of the components
+
+### Role of type attribute in script tag? What options can I use there?
+{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX?
+
+- The use of type attribute in script tag is that it allows to export and import a component as module.
+- This allows to easily import and export the components we require.
+- {TitleComponent} : Used when we have to write any valid JavaScript
+- {<TitleComponent/>}:  used when component does not have any children.
+- {<TitleComponent></TitleComponent>} : Used when we have to wrap another component inside any components.
+
+## Coding Assignment:
+
+Create a Nested header Element using 
+
+- React.createElement(h1,h2,h3 inside a div with class “title”)
+Create the same element using JSX
+Create a functional component of the same with JSX
+Pass attributes into the tag in JSX
+Composition of Component(Add a component inside another)
+{TitleComponent} vs {<TitleComponent/>} vs {<TitleComponent></TitleComponent>} in JSX
+
+- Create a Header Component from scratch using Functional Components with JSX
+Add a Logo on left
+Add a search bar in middle
+Add User icon on right
+Add CSS to make it look nice
+
+
 
 # Talk is cheap, show me the code! - 04
 
@@ -187,7 +229,7 @@ also .parcel-cache use by the dist folder and when there is a change it will be 
 
 
 # What is config driven UI?
-- Config driven UI is used to controll the UI bases on the configurations or the data coming from the backend api.
+- Config driven UI is used to controll the UI based on the configurations or the data coming from the backend api.
 example: 
     we want our e-commers website to work in different places. so we wont we making different website right. so what we do is send data from the backend accoring to location of other configurations. accoding to the DATA our layout of website or UI changes. 
 
