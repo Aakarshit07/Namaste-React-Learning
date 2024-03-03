@@ -38,7 +38,7 @@ it is used when our server require to load resources  from another domain. resou
 
 ● What is diference between React and ReactDOM
 
-React responsive for the React code functionality
+React responsible for the React core functionality.
 
 ReactDOM deals with the Virtual DOM or How DOM operations should be hanlded.
 
