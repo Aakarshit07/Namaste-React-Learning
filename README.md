@@ -6,7 +6,7 @@
 
 > ***“Emmet is a plug in for many popular text editors which greatly improves HTML & CSS workflow:”***
 
-## What is plug in?
+● What is plug in?
 A plug-in is a software component that adds a specific feature to an existing computer program.
 
 ● Difference between a Library and Framework?
