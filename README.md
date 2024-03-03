@@ -71,7 +71,7 @@ Optimized for production  use.
 1. **HTML Parsing**
 2. **Script Loading**
 
-Script Loading has 2 parts **Fetching an script** from the network ****and  **Executing an Script line by line**
+Script Loading has 2 parts **Fetching an script** from the network and **Executing an Script line by line**
 
 - How All these happens
 - When we just using website which doesn’t use Async or Defer.
