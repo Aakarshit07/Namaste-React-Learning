@@ -82,7 +82,7 @@ Script Loading has 2 parts **Fetching an script** from the network and **Executi
 - When to use async ?
 - Mostly used when the scripts are not dependent on each other.
     
-    **HTML Parsing** happens and **parallelly** **Fetch Script**  when it done fetching it ****script. it stops the parsing of HTML. It start to **Executes script** after that it continues to parse the HTML.
+    **HTML Parsing** happens and **parallelly** **Fetch Script**  when it done fetching it script. it stops the parsing of HTML. It start to **Executes script** after that it continues to parse the HTML.
     
 - When website use Defer.
 - When to use defer ?
@@ -333,8 +333,9 @@ example:
 
 form the list we deleted an element.
 
-- if we new item to list then it can be possible that other list has filled the position of the deleted.
-- This can cause problem as like in our database they have different id and when we try to add an item list it will add it to wrong position.
+- if we add new item to list then it can be added at any start or end or between any position.
+- This can cause problem as like in when we are tryig to update any card then react will never know which list item actually need to be updated.
+- Hence, it will re render the whole component instead of a single item. this cause Performence issue. 
 
 # Can we use index as keys in React?
 
