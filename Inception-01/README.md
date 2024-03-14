@@ -275,6 +275,15 @@ example:
 # Render ? 
 - Whenever the state variable updated react re-renders the components.
 
+# React Fiber Algorithm 
+- Used in React's reconciliation process that was introduced in React 16.
+- It Uses Diffing algorithm to compare the changes in virtual DOM  and real DOM and then update the real DOM Efficiently. 
+- It also offers many more featurs like code spllitting and smooth re-rendering.
+
+# Diffing algoritm
+- It is used to compare the changes in virtual DOM and real DOM.
+- It is a part of Fiber Algorithm.
+
 # Exploring The World - 06
 
 # What is Monolith vs Microservices architecture?
