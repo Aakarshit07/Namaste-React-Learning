@@ -1,10 +1,14 @@
 # Inception - 01:
 # Assignment: 
-Theory -
+### Theory -
+
 ● What is Emmet?
 
 > ***“Emmet is a plug in for many popular text editors which greatly improves HTML & CSS workflow:”***
 
+● What is plug in?
+
+A plug-in is a software component that adds a specific feature to an existing computer program.
 
 ● Difference between a Library and Framework?
 
@@ -34,7 +38,7 @@ it is used when our server require to load resources  from another domain. resou
 
 ● What is diference between React and ReactDOM
 
-React responsive for the React code functionality
+React responsible for the React core functionality.
 
 ReactDOM deals with the Virtual DOM or How DOM operations should be hanlded.
 
@@ -67,7 +71,7 @@ Optimized for production  use.
 1. **HTML Parsing**
 2. **Script Loading**
 
-Script Loading has 2 parts **Fetching an script** from the network ****and  **Executing an Script line by line**
+Script Loading has 2 parts **Fetching an script** from the network and **Executing an Script line by line**
 
 - How All these happens
 - When we just using website which doesn’t use Async or Defer.
@@ -78,7 +82,7 @@ Script Loading has 2 parts **Fetching an script** from the network ****and  **Ex
 - When to use async ?
 - Mostly used when the scripts are not dependent on each other.
     
-    **HTML Parsing** happens and **parallelly** **Fetch Script**  when it done fetching it ****script. it stops the parsing of HTML. It start to **Executes script** after that it continues to parse the HTML.
+    **HTML Parsing** happens and **parallelly** **Fetch Script**  when it done fetching it script. it stops the parsing of HTML. It start to **Executes script** after that it continues to parse the HTML.
     
 - When website use Defer.
 - When to use defer ?
@@ -329,8 +333,9 @@ example:
 
 form the list we deleted an element.
 
-- if we new item to list then it can be possible that other list has filled the position of the deleted.
-- This can cause problem as like in our database they have different id and when we try to add an item list it will add it to wrong position.
+- if we add new item to list then it can be added at any start or end or between any position.
+- This can cause problem as like in when we are tryig to update any card then react will never know which list item actually need to be updated.
+- Hence, it will re render the whole component instead of a single item. this cause Performence issue. 
 
 # Can we use index as keys in React?
 
@@ -345,6 +350,7 @@ form the list we deleted an element.
 # What is a Config Driven UI ?
 
 - Config Driven UI are the UIs Where UI is based of the data coming from the database or any api. etc.
+
 
 # Let's get Hooked - 05
 
