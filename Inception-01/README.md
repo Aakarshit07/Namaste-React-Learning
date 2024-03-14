@@ -274,3 +274,31 @@ example:
 
 # Render ? 
 - Whenever the state variable updated react re-renders the components.
+
+# Exploring The World - 06
+
+# What is Monolith vs Microservices architecture?
+- Monolith architecture: 
+- Has one Project for all the services. 
+- Such as For UI, Backend, Database, APIs, Authentication and etc. 
+- They have everything inside of one projects.
+- So problem like they are even if you have to make small changes you has to complie the whole project again to reflect it.
+
+- Microservices architecture: 
+- Has many Projects for each service. 
+- Such as For UI, Backend, Database, APIs, Authentication, and etc. 
+- They have separate Services.
+- Having different services also called Speration of Concern.
+- They talk to each other depenging on usercase.
+- Combining together each services becomes one Project.
+- Single Responsibility principle. Where one service has one function and it is responsible for one thing.
+
+# Two approaches to render webpage ?
+- 1. Page Loads --> API --> Render.
+- 2. Page Loads --> Render --> API --> Render.
+
+# In React we will be using 2nd approach. Why?
+- Because it Probive Better User Exprerience ( UX ).
+- It provied the smooth transiting from showing less data on page and then the full data.
+
+# 

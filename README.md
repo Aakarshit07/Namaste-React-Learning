@@ -345,3 +345,26 @@ form the list we deleted an element.
 # What is a Config Driven UI ?
 
 - Config Driven UI are the UIs Where UI is based of the data coming from the database or any api. etc.
+
+# Let's get Hooked - 05
+
+# Assignment:
+
+# What is the difference between Named Export, Default export and * as export?
+
+- **There can be only one default export in one file/component.**
+- **There can be any number of named export in one file/component.**
+
+# What is the importance of config.js file
+
+- Our UI is driven this config.js file.
+
+# What are React Hooks?
+
+- React Hooks are the Normal JS functions that has special features. such as useState() hook.
+- It allows React to know any the changes made in our react component. according to changes it re-render’s our UI.
+
+# Why do we need a useState Hook?
+
+- We need hooks because normal js identifies does not works as we expect them to work.
+- thats why we need react hooks that provide more features.
