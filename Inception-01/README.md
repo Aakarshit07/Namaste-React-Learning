@@ -310,4 +310,100 @@ example:
 - Because it Probive Better User Exprerience ( UX ).
 - It provied the smooth transiting from showing less data on page and then the full data.
 
-# 
+# useEffect Hook.
+- It is a Hook that runs after the render.
+- It is used to call the APIs, event subscribing, and unsubscribing.
+- It also helps to handle the side effects.
+### Example:
+- we have and api that will fetch data from Swiggi. we will use useEffect Hook to fetch the data. 
+- It render the card it is like subscribing to the event.
+- so when user goes to next page we want out card to remove and replaced withsometing. so to clean these events we use useEffect Hook's unsubscribing event.
+
+- useEffect Hook takes two Arguements.
+1. Callback
+2. Dependency Array.
+
+- There Are 3 useCases of using useEffect.
+1. When we want out component rerender whenever there is an change in any local state of the component. 
+
+### Example: 
+- We dont give any  dependency array.
+- useEffect(() => {}, );
+
+2. When we have to render the component only once. fetching data from Api and rendering the data using card.
+
+### Example: 
+-We give any empty dependency array.
+- useEffect(() => {}, []);
+
+3. When we have to trigger the re-render when ever there is a change in certain state. so it only re-renders when the that perticular state changes.
+
+### Example: 
+-We give any state variable in dependency array.
+- useEffect(() => {}, [<Some state variable>]);
+
+# What will happen if we try to call an Swiggi Api or any other api from our localhost?
+- We get an error. Access frtch <API URL> has been blocked by the CORS Poilicy.
+
+# Why we get this error?
+- Because our browser is not allowing the API call from our localhost to Swiggi's API / from one origin to another origin. 
+- Whenever there is an Origin Mis-match browser blocks that api call.
+
+# What is Shimmer UI?
+- As we see the website when they are loading they show the empty UI like in Youtube it show the Vido Card.
+- and when loading is done we render our original UI with data.
+
+# Why we use Shimmer UI?
+- Shimmer UI helps in Improving an User Exprience
+
+# UseState?
+- Whenever the local state changes, react triggers a reconciliation Cycle (Re-rencders the component).
+
+# Example:-
+- When we do onChange on the Inputtext field. everytime a key is pressed it triggers a re-render of the component. 
+
+# What is the difference between JS expression and JS statement?
+- *JS expression:* It is evaluate to some value.
+
+### Example: 
+- A + B = <Some value>.
+- Like we calculated the filteredList in our code.
+
+- *JS statement:* It is like performing an action and controling the flow of our programm.
+
+### Example: 
+- If(Age > 18) { Console.log("You can apply for a driving license") }
+- Like we rendring the Shimmer Ui when FilterList length is zero. and when it is not we rendered our Original cards.
+
+
+# What is Conditional Rendering, explain with a code example?
+- we use conditional rendring to make our app more dynamic.
+- using condition we render our UI.
+
+### Example: 
+- Like we built the Login and Logout Button functionality.
+- When user is logged in we render the Logout Button. otherwise we render Login Button.
+- we are achiving it using if-else/ternary operator condition.
+
+- Same for the Shimmer UI.
+
+
+# What is async and await?
+- Async and await is a new way to handle promises.
+- It allows us to write asynchronous code in a synchronous way.
+- It also provide the clean syntax fro writing the promises.
+
+# What is the use of `const json = await data.json();` in getRestaurants();
+
+- When we first fetch the data from the API. It returns a Promise.
+- To convert that promise into the actual data object. we use await keyword.
+- when promise is settled eventually. our await handles this and returns the actual data from the api. 
+- Now api data is ready to use.
+
+# What is Optional Chaining?
+- Optional Chaining is a way to handle the data. 
+- Assume we have an object or function to call.
+- we want to get the property that is nested inside that object or function. there we use ?. operator.
+- *userObject?.userDetails?.PersonalInfo?.name*
+- So it always check is we have userObject. then it mover forword and checking till end.
+- If it encounter any value that is undefined or null it returns undefined instead of throwing an error.
