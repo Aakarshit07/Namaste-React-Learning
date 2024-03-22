@@ -287,13 +287,13 @@ example:
 # Exploring The World - 06
 
 # What is Monolith vs Microservices architecture?
-- Monolith architecture: 
+### Monolith architecture: 
 - Has one Project for all the services. 
 - Such as For UI, Backend, Database, APIs, Authentication and etc. 
 - They have everything inside of one projects.
 - So problem like they are even if you have to make small changes you has to complie the whole project again to reflect it.
 
-- Microservices architecture: 
+### Microservices architecture: 
 - Has many Projects for each service. 
 - Such as For UI, Backend, Database, APIs, Authentication, and etc. 
 - They have separate Services.
@@ -407,3 +407,42 @@ example:
 - *userObject?.userDetails?.PersonalInfo?.name*
 - So it always check is we have userObject. then it mover forword and checking till end.
 - If it encounter any value that is undefined or null it returns undefined instead of throwing an error.
+
+# Finding the Path - 07
+
+# How do we navigate from one page to another in react?
+
+# Why we need react-router-dom package?
+
+# How do we use react-router-dom package?
+
+# How to handel the error page?
+
+# What is the useRouteError hook?
+
+# Why we use useRouteError hook?
+
+# How do we use useRouteError hook?
+
+# How do we pass Childrens routes to our AppRoutes?
+
+# How do we make our app dynamic that everytime our path changes but the header and footer remains same?
+
+# How to we use Outlet ?
+
+# What is Link in react?
+
+# Why we use Link and how?
+
+
+# Two types of routing in webapps.
+1. *Client Side Routing*:
+- When we use the link to navigate to another page. it already has the code for the page we are navigating.
+- it simply replace the current html to the new html. *Without Making any network calls*. it doesnt reload the page. 
+
+2. *Server Side Routing*:
+- When we use anchor tag to navigate to another page. it make a *network call to fetchs the html for that page* and show it to the user.
+- It reloads the whole page.
+
+
+
