@@ -434,6 +434,12 @@ example:
 
 # Why we use Link and how?
 
+# What are various ways to add images into our App? Explain with code examples
+
+# What would happen if we do console.log(useState())?
+
+# What is SPA?
+
 
 # Two types of routing in webapps.
 1. *Client Side Routing*:
@@ -444,5 +450,6 @@ example:
 - When we use anchor tag to navigate to another page. it make a *network call to fetchs the html for that page* and show it to the user.
 - It reloads the whole page.
 
+# Lets get classy - 08
 
 

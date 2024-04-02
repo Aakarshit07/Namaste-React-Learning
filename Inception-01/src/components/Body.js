@@ -27,7 +27,7 @@ const Body = () => {
       setFilteredRestaurantList(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
       // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     } catch (error) {
-        console.log(error.message);
+      console.log(error.message);
     }
 
   }
@@ -60,7 +60,7 @@ const Body = () => {
           />
           <button 
             className="search-btn"
-            onClick={()=>{
+            onClick={()=> {
               const filterlist = restaurantList.filter(
                 (item) => item.info.name.toLowerCase().includes(searchText.toLowerCase().trim()));
                 console.log(filterlist);
