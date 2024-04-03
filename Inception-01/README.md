@@ -411,35 +411,64 @@ example:
 # Finding the Path - 07
 
 # How do we navigate from one page to another in react?
+- We use react-router-dom as this allows us to navigate from one page to another.
 
 # Why we need react-router-dom package?
+- Because react-router-dom uses Client Side Routing to navigate from one page to another.
+- Due to this we dont need to make any network calls.
 
 # How do we use react-router-dom package?
+- Step 1: npm install react-router-dom
+- Step 2: Import the createBrowserRouter from react-router-dom
+- Step 3: createBrowserRouter method will take array as parameter.
+- Step 4: In array we setup our routers. 
+- Step 5: Import the RouterProvider Component and pass the routers we creted to this RouterProvider as router Prop.
+- This allows our app to enable the Routing. 
 
 # How to handel the error page?
-
-# What is the useRouteError hook?
+- We pass the errorElement with the fallback Component that displays where there is error in given the path/ or trying access when the path doesnt exists.
 
 # Why we use useRouteError hook?
+- This hook allows us to catch the erros in the path and we can disply the erros to the user.
 
 # How do we use useRouteError hook?
+- we import the useRouteError hook from the react-router-dom library. anad store it into the variable. 
+- useRouteError hook returns the error object.
 
 # How do we pass Childrens routes to our AppRoutes?
+- We one component has other child routes. then we use children array and pass the each child route in their object.
+- but to use children we need to use the outlet component.
+
 
 # How do we make our app dynamic that everytime our path changes but the header and footer remains same?
-
-# How to we use Outlet ?
+- using the Outlet component we can make our app dynamic.
+- we create an component where we give all the Components that are common in other pages. 
+- Between those components we give the outlet component.
+- What this will do it that. when the path changes it replaces the outlet component with the new component we required.
 
 # What is Link in react?
+- Link allows us to create the special anchon tag.
+- That allows us to do client side routning without making network calls to fetch the new component.
 
-# Why we use Link and how?
-
+# Why we use how?
+- We wrap the <Link><Component></Link>
+ 
 # What are various ways to add images into our App? Explain with code examples
+- we can add images using following ways.
+1. img tag that directly taks the url in form of string.
+2. we can also pass the src={} and in curlies we pass the variable that hols the Image link.
+3. we can also import the images as Component and pass that component to the src. 
 
 # What would happen if we do console.log(useState())?
+- It returns an Array of length 2. 
+- First is the initial value.
+- Second is the updater function.
 
 # What is SPA?
-
+- SPA stands for Single Page Application.
+- This means that we have only one page in our web page.
+- We just replace the content in this single webpage. 
+- and Displays it on the UI.
 
 # Two types of routing in webapps.
 1. *Client Side Routing*:
@@ -452,4 +481,22 @@ example:
 
 # Lets get classy - 08
 
+# Read abt createHashRouter, createMemoryRouter from React Router docs.
+
+# What is the order of life cycle method calls in Class Based Components
+
+# Why do we use componentDidMount?
+
+# Why do we use componentWillUnmount? Show with example
+
+# (Research) Why do we use super(props) in constructor?
+# (Research) Why can't we have the callback function of useEffect async?
+
+# Write a console.log for each lifecycle method
+
+# Play with the console logs to find out the correct order of their execution
+
+# Create interval inside componentDidMount?
+
+# Use clearInterval to fix the issue caused by that interval
 
