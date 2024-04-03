@@ -490,6 +490,7 @@ example:
 # Why do we use componentWillUnmount? Show with example
 
 # (Research) Why do we use super(props) in constructor?
+
 # (Research) Why can't we have the callback function of useEffect async?
 
 # Write a console.log for each lifecycle method
@@ -500,3 +501,16 @@ example:
 
 # Use clearInterval to fix the issue caused by that interval
 
+# How to think to build your custom hook
+- Think of the contract of the hook i wanna build.
+- Contract means - kya inout hoga and kya output hoga.
+- Then implement the functionality / logic about what you want to achieve.
+- Then return the output.
+- At the end Export the hook.
+
+# How to do Code Splitting | Chunking | Dynamic Bundling | Lazy Loasding | On Demand Loading | Dynamic import
+
+- We do code splitting so that our webapp doesnt need to Load all the components at once as well as when we need to reduce the size of our bundle. 
+- use use the lazy method provided by thee react library.
+- Lazy imports the specific component dynamically on demand.
+- To effectively use lazy loading we use Suspence component as a fall back for the lazy loaded component so that when there its loading and geeting the data  it render the fallback UI instead of any error.

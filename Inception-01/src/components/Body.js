@@ -2,17 +2,19 @@ import { useEffect, useState } from "react";
 import RestaurantCard from "./RestaurantCard.js";
 import Shimmer from "./Shimmer.js";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus.js";
 
 const Body = () => {
 
   const [restaurantList, setRestaurantList] = useState([]);
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
   const [searchText, setSearchText] = useState("");
+  const onlineStatus =useOnlineStatus();
+ 
   useEffect(()=>{
     console.log("useEffect called");
     fetchData();
   }, [])
-  // console.log("First render Before useEffect");
 
   const fetchData = async() => {
     try {
@@ -44,6 +46,10 @@ const Body = () => {
         <Shimmer />
       </div>
     )
+  }
+
+  if(onlineStatus === false) {
+    return <h1>Looks like you'r offline, Please check your internet connection.</h1>
   }
 
   return (
