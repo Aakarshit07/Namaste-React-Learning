@@ -484,22 +484,72 @@ example:
 # Read abt createHashRouter, createMemoryRouter from React Router docs.
 
 # What is the order of life cycle method calls in Class Based Components
+- First Constructor is called. 
+- Second Render method is called.
+- Third ComponentDidMount method is called.
+- If there is a change in state the ComponentDidUpdate method is called.
+- When we move one page to another ComponentWillUnMount mehtod is called.
 
 # Why do we use componentDidMount?
+- We use ComponentDidMount because it is called only once after the render is called.
+- This Allows us to make API calls inside it.
 
 # Why do we use componentWillUnmount? Show with example
+- It is used to clean the APIs, Timers, Events that doesnt required anymore.
+- When we move to next page this clears everything so that there wont we any memory leaks.
 
 # (Research) Why do we use super(props) in constructor?
+- When we extends the class from another class.
+- so to access the partents props and methods we use super() method. 
+- to call the parents class.
+- this allows child class to access parents props and methods. 
 
 # (Research) Why can't we have the callback function of useEffect async?
+- Beacuse useEffect expects its first arguement to be function to cleanup function or nothing at all(undefined). When we use async on the callback function it returns a prmoise. Promise cannot be counted as the function. 
+- Hence, It Throws an error.
 
 # Write a console.log for each lifecycle method
+- In which order the parent class componet and child class component will be rendered.
+- When Parent has only one child 
+- Parent Constructor
+- Parent render
+  - Child Constructor
+  - Child Render
+  - Child ComponentDidMount
+- Parent ComponentDidMount
 
 # Play with the console logs to find out the correct order of their execution
 
+# When Parent has more than one child
+# This is Render Phase
+
+- Parent Constructor
+- Parent render
+  - First Child Constructor
+  - First Child Render
+  - Second Child Constructor
+  - Second Child Render
+  
+# This is Commit Phase
+- First Child ComponentDidMount
+- Second Child ComponentDidMount
+- Parent Child ComponentDidMount
+  
+- This is happening because updating element in actual DOM happend in two phases.
+- Render Phase and Commit Phase. 
+- As Render method is fast and not expensive as DOM updating. 
+- Thats why React BATCH The RENDERS And Compute them and Schedule them.
+- In COMMIT PHASE React actually updates the DOM. So it does it from the Batch Scheduled.
+
 # Create interval inside componentDidMount?
+- When we do so it start the interval.
+- When if we navigate to another page it is still running.
+- and when come back to the same page it start one more timer and it addsup to the previous timer  everytime we nagivate to another page and comes back.
 
 # Use clearInterval to fix the issue caused by that interval
+- To clearInterval we use ComponentWillUnmount method.
+- we assign the this.timer variable to the interval.
+- calls this.timer in ComponentWillUnmount method and clears the interval everytime we nagivate from one page to another.
 
 # How to think to build your custom hook
 - Think of the contract of the hook i wanna build.
