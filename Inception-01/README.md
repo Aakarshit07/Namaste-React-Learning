@@ -551,6 +551,8 @@ example:
 - we assign the this.timer variable to the interval.
 - calls this.timer in ComponentWillUnmount method and clears the interval everytime we nagivate from one page to another.
 
+# Optimizing our app - 09
+
 # How to think to build your custom hook
 - Think of the contract of the hook i wanna build.
 - Contract means - kya inout hoga and kya output hoga.
@@ -564,3 +566,12 @@ example:
 - use use the lazy method provided by thee react library.
 - Lazy imports the specific component dynamically on demand.
 - To effectively use lazy loading we use Suspence component as a fall back for the lazy loaded component so that when there its loading and geeting the data  it render the fallback UI instead of any error.
+
+
+# Jo Dikhta Hai Vo Bikta Hai - 10
+
+- SASS, SCSS, 
+- Styled Components, Matrial UI, Chakra UI, Ant UI, 
+- TailwindCSS
+
+

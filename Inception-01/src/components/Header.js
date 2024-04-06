@@ -7,19 +7,19 @@ const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus();
     return (
-      <div className="header">
-        <div className="logo-container">
-            <img className="logo" src={Logo} />
+      <div className="flex justify-between items-center border-b-2 border-gray-300 p-4">
+        <div className="">
+            <img className="w-24" src={Logo} />
         </div>
-        <div className="nav-items">
-          <ul>
-            <li>Online Status: {onlineStatus ? "✅": "⭕"}</li>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About U</Link>s</li>
-            <li><Link to="/contact">Contact Us</Link></li>
-            <li><Link to="/grocery">Grocery</Link></li>
-            <li><Link to="/cart">Cart</Link></li>
-            <button className="header-btn" onClick={()=>{
+        <div className="">
+          <ul className="flex justify-between items-center gap-4 p-4">
+            <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block">Online Status: {onlineStatus ? "✅": "⭕"}</li>
+            <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white md:text-md text-2xl border-2 md:border-none"><Link to="/">Home</Link></li>
+            <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block" ><Link to="/about">About U</Link>s</li>
+            <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block" ><Link to="/contact">Contact Us</Link></li>
+            <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block" ><Link to="/grocery">Grocery</Link></li>
+            <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block" ><Link to="/cart">Cart</Link></li>
+            <button className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block" onClick={()=>{
               (btnName === "Login" ? setBtnName("Logout") : setBtnName("Login"));
             }}>{btnName}</button>
           </ul>

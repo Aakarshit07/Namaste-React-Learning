@@ -40,10 +40,6 @@ const Body = () => {
         <Shimmer />
         <Shimmer />
         <Shimmer />
-        <Shimmer />
-        <Shimmer />
-        <Shimmer />
-        <Shimmer />
       </div>
     )
   }
@@ -53,11 +49,12 @@ const Body = () => {
   }
 
   return (
-    <div className="body">
-      <div className="filter">
-        <div className="search-container">
+    <div className="my-4">
+      <div className="flex justify-start items-center gap-4 m-4 px-10 py-4">
+        <div className="flex justify-between items-center">
           <input 
-            className="search" 
+            className="border-2 border-r-0 border-gray-400 rounded rounded-r-none px-2 py-1 outline-none"
+            placeholder="Your favorite food here " 
             type="text" 
             value={searchText} 
             onChange={(e)=>{
@@ -65,7 +62,7 @@ const Body = () => {
             }}
           />
           <button 
-            className="search-btn"
+            className="border-2 border-gray-400 rounded px-2 py-1 outline-none rounded-l-none text-gray-600 hover:text-white hover:bg-gray-400/95 font-semibold"
             onClick={()=> {
               const filterlist = restaurantList.filter(
                 (item) => item.info.name.toLowerCase().includes(searchText.toLowerCase().trim()));
@@ -74,18 +71,21 @@ const Body = () => {
             }}
           >Search</button>
         </div>
-        <button 
-          className="filter-btn"
-          onClick={() => {
-            let list = restaurantList.filter((item) => item.info.avgRating >= 4.5);
-            console.log(list);
-            setRestaurantList(list);
-          }}
-        >
-          Top Rated Restaurants
-        </button>
+        <div className="hidden md:block">
+          <button 
+            className="border-2 border-gray-400 rounded px-2 py-1 outline-none text-gray-600 hover:text-white hover:bg-gray-400/95 font-semibold"
+            onClick={() => {
+              let list = restaurantList.filter((item) => item.info.avgRating >= 4.5);
+              console.log(list);
+              setFilteredRestaurantList(list);
+            }}
+            >
+            Top Rated Restaurants
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+
+      <div className="flex flex-wrap items-center justify-center gap-12  m-4 p-4">
         {
           filteredRestaurantList.map((card) => (
             <Link key={card.info.id} to={"/restaurants/"+card?.info?.id}>

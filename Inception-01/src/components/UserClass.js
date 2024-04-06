@@ -27,7 +27,10 @@ class UserClass extends React.Component {
             this.setState({
                 userInfo: jsonData,
             })
-
+            let count = 0;
+            this.tiemr = setInterval(() => {
+                console.log("Counter ", count++)
+            }, 1000)
         } catch (error) {
             console.log(error);
         }
@@ -39,18 +42,24 @@ class UserClass extends React.Component {
 
     componentWillUnmount () {
         console.log("ComponentwillUnmount");
+        // To access the counter we use this
+        clearInterval(this.timer);
     }
 
     render() {
         //* Destructureing of props
         const {name, bio, avatar_url } = this.state.userInfo;
         return (
-            <div className="user-card">
-                <img src={avatar_url} alt={name} />
-                <h2>Name: {name}</h2>
-                <h3>About Me:{bio}</h3>
+            <div className="flex justify-center items-center px-2 m-2">
+                <div className="border-4 rounded-lg flex items-center w-1/2">
+                    <img  className="w-40" src={avatar_url} alt={name} />
+                    <div className="flex-col text-neutral-700 text-lg text-wrap w-1/2 text-ellipsis line-clamp-5">
+                        <h2 className="font-bold">{name}</h2>
+                        <h3 className="font-semibold text-neutral-500">{bio}</h3>
+                    </div>
+                </div>
             </div>
-        )
+        ) 
     }
 }
 
