@@ -14,7 +14,7 @@ const Header = () => {
         <div className="">
           <ul className="flex justify-between items-center gap-4 p-4">
             <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block">Online Status: {onlineStatus ? "✅": "⭕"}</li>
-            <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white md:text-md text-2xl border-2 md:border-none"><Link to="/">Home</Link></li>
+            <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white text-lg md:text-md border-2 md:border-none"><Link to="/">Home</Link></li>
             <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block" ><Link to="/about">About U</Link>s</li>
             <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block" ><Link to="/contact">Contact Us</Link></li>
             <li className="font-semibold text-gray-600 p-2 rounded-md hover:bg-neutral-400/90 hover:text-white hidden md:block" ><Link to="/grocery">Grocery</Link></li>

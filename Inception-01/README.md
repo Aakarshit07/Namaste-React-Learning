@@ -570,8 +570,14 @@ example:
 
 # Jo Dikhta Hai Vo Bikta Hai - 10
 
+# Type of CSS libraries and framewrorks.
 - SASS, SCSS, 
 - Styled Components, Matrial UI, Chakra UI, Ant UI, 
 - TailwindCSS
 
 
+# Data is the new Oil - 11
+
+# What is Higher order Components?
+- It takes a component and returns a component
+- It takes a component and enhances/modifies it and returns a component

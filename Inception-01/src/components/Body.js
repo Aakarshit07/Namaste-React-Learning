@@ -10,9 +10,9 @@ const Body = () => {
   const [filteredRestaurantList, setFilteredRestaurantList] = useState([]);
   const [searchText, setSearchText] = useState("");
   const onlineStatus =useOnlineStatus();
- 
+
   useEffect(()=>{
-    console.log("useEffect called");
+    // console.log("FilteredResList", filteredRestaurantList);
     fetchData();
   }, [])
 
@@ -34,15 +34,15 @@ const Body = () => {
 
   }
 
-  if(restaurantList.length === 0) {
-    return (
-      <div className="Shimmer-body">
-        <Shimmer />
-        <Shimmer />
-        <Shimmer />
-      </div>
-    )
-  }
+  // if(restaurantList.length === 0) {
+  //   return (
+  //     <div className="Shimmer-body">
+  //       <Shimmer />
+  //       <Shimmer />
+  //       <Shimmer />
+  //     </div>
+  //   )
+  // }
 
   if(onlineStatus === false) {
     return <h1>Looks like you'r offline, Please check your internet connection.</h1>
@@ -70,18 +70,6 @@ const Body = () => {
               setFilteredRestaurantList(filterlist);
             }}
           >Search</button>
-        </div>
-        <div className="hidden md:block">
-          <button 
-            className="border-2 border-gray-400 rounded px-2 py-1 outline-none text-gray-600 hover:text-white hover:bg-gray-400/95 font-semibold"
-            onClick={() => {
-              let list = restaurantList.filter((item) => item.info.avgRating >= 4.5);
-              console.log(list);
-              setFilteredRestaurantList(list);
-            }}
-            >
-            Top Rated Restaurants
-          </button>
         </div>
       </div>
 
