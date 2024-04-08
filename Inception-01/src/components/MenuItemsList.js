@@ -5,7 +5,7 @@ function MenuItemsList ({data}) {
     return (
         <div className="">
             {data.map((item) => 
-                <div key={item.card.info.id} className="border-2 border-neutral-200 rounded-lg m-4 p-4 flex justify-between items-center gap-2">
+                <div key={item.card.info.id} className="border-2 border-neutral-200 rounded-lg m-4 p-4 flex justify-between items-center gap-2 shadow-md">
                     <div className="w-4/5 p-2">   
                         <div>
                             <h2 className="font-bold">{item.card.info.name}</h2>
@@ -17,7 +17,7 @@ function MenuItemsList ({data}) {
                         <img className="w-32 md:w-40 h-28  rounded-md shadow-lg" src={CDN_URL + item.card.info.imageId} alt="Dish Image" />
                         <div className="absolute">
                             <button 
-                                className="rounded-xl px-1 py-2 md:p-2 text-sm md:text-md cursor-pointer bg-green-600 hover:border-green-500 hover:border-2 hover:bg-white hover:text-green-600 text-white shadow-lg font-mono md:font-bold mt-20"
+                                className="rounded-lg p-1 py-2 w-16 md:w-24 md:p-2 cursor-pointer bg-green-600 hover:border-green-500 hover:border-2 hover:bg-white hover:text-green-600 text-white shadow-lg font-mono md:font-bold mt-20"
                             >Add +</button>
                         </div>
                     </div>

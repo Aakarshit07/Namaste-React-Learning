@@ -1,12 +1,10 @@
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import MenuItemsList from './MenuItemsList';
-import { useState } from 'react';
-function RestaurantCategory({data}) {
+function RestaurantCategory({data, isMenuOpen, setShowIndex}) {
 
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const handleOnClick = () => {
-        setIsMenuOpen(!isMenuOpen);
+        setShowIndex();
     }
 
     return (

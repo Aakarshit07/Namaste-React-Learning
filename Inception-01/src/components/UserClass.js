@@ -37,11 +37,9 @@ class UserClass extends React.Component {
     }
 
     componentDidUpdate () {
-        console.log(this.state.userInfo.name, "ComponentDidUpdate");
     }
 
     componentWillUnmount () {
-        console.log("ComponentwillUnmount");
         // To access the counter we use this
         clearInterval(this.timer);
     }
