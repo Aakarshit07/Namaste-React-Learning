@@ -575,9 +575,45 @@ example:
 - Styled Components, Matrial UI, Chakra UI, Ant UI, 
 - TailwindCSS
 
+# In tailwind.config.js, what does all the keys mean (content, theme, extend, plugins)?
+1. content: [], This array takes the paths for where to look for the css in our project.
+2. theme: {}, This is the object takes specific properties like colors , spaces, breakpoints, etc..  
+3. extend: {}, This allows us to create our custom classes. That are qunnique to our project.
+4. plugins: [], This Array takes and plugins that allows us to use different and thirdparty libraries adding more functionalities.
+
+# Why do we have .postcssrc file?
+- we use this to se the configuration of postcss. With the help of this config we tell out postcss that this is how our css is defined and it takes case of minifying our css as well as manage how css classe we gave using tailwind should proccessed. 
 
 # Data is the new Oil - 11
 
 # What is Higher order Components?
 - It takes a component and returns a component
 - It takes a component and enhances/modifies it and returns a component
+
+# What is prop drilling?
+- When we require to pass the data from components where we didnt required and we just pass it from there to the required component. this is called props drilling.
+
+# What is lifting the state up?
+- Lets assume we creating an Todo App. It has two components one is TodoCard and TodoList.
+- So TodoCard child of TodoList component. We passing the data from TodoList to TodoCard.
+- There is one more feature that TodoCard has it is the select button.
+- And we have the DeleteButton for TodoCard in the TodoList.
+- Now Problem is that we dont have the access to the Selected TodoCard.
+- To solve this problem we use lifitng the state. 
+- It Simply means that we are controlling the state of child from parent.
+- Now we just Migrate our Selected state from TodoCard to TodoList Component.
+- From there we Pass our Selected State with its updater function to TodoCard component.
+- Now in TodoCard we set the even onClick to the select button.
+- When user clicks it selects the TodoCard according to the id and it will be updated in the parent.
+
+# What is Context Provider and Context Consumer?
+- Context Provider is used to provide the context to our app or the specific part of our webapp and it created the global state.
+- When we pass the provided we allow our app to difrectly get the passed Context value and use it where we required it.
+- Context Provider uses the useContext(<ContextWeCreated>) hook. We use it to get the Context value.  
+
+- Context Consumer is used to get the context we created firectly in out app by wrapping it over our component we want and it takes a callback function and in callback we get our context and we extract from there and uses it.
+-  Context Consumer uses the props approach to access the Context Value.
+
+# If you don’t pass a value to the provider does it take the default value?
+- Yes, we can pass the default value to the provided.
+- So When we dont give any value to the provider it will take the default value.
