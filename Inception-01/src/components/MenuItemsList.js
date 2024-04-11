@@ -1,7 +1,14 @@
 import { CDN_URL } from "../utils/constants.js";
-
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice.js";
 function MenuItemsList ({data}) {
-    console.log("Menulist", data);
+
+    const dispatch = useDispatch();
+    const handleAddToCart = (item) => {
+        console.log("Added Item to cart");
+        dispatch(addItem(item));
+    }
+
     return (
         <div className="">
             {data.map((item) => 
@@ -18,7 +25,10 @@ function MenuItemsList ({data}) {
                         <div className="absolute">
                             <button 
                                 className="rounded-lg p-1 py-2 w-16 md:w-24 md:p-2 cursor-pointer bg-green-600 hover:border-green-500 hover:border-2 hover:bg-white hover:text-green-600 text-white shadow-lg font-mono md:font-bold mt-20"
-                            >Add +</button>
+                                onClick={() => handleAddToCart(item)}
+                            >
+                                Add +
+                            </button>
                         </div>
                     </div>
                 </div>
