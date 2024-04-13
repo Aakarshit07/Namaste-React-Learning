@@ -617,3 +617,34 @@ example:
 # If you don’t pass a value to the provider does it take the default value?
 - Yes, we can pass the default value to the provided.
 - So When we dont give any value to the provider it will take the default value.
+
+
+
+# Let's Built Our Store - 12
+
+
+
+# Time For Test - 13
+
+# Type of testing (Developer)
+- Unit Testing
+- Integration Testing
+- End to End Testing - E2E Testing
+
+- React-Testing Library is build on the top of DOM Testing Library
+
+# Setting up Testing in our app
+- Install React Testing Library
+- Installed jest (In jest Docs)
+- Installed Balel Dependencies (from jest Docs)
+- Configured Babel (In jest Docs)
+- Configure Parcel Config file to disable default babel transpilation (Goto jest babel config In parcel Docs.)
+- Config Jest  by doing ```npx jest --init``` (if using jest version 28 or above install: ```npm install --save-dev jest-environment-jsdom```)
+- ```npm i -D @babel/preset-react``` - to make JSX work in the test cases
+- Include ```['@babel/preset-react', { runtime: "automatic" }]``` in your babel.config.js file inside the presets array.
+- Install ```npm install -D @testing-library/jest-dom```
+
+# Why did we disabled the default babel transpilation?
+- because when we setup tesing library and uses the Parcel. so parcel already uses the Babel and it has already its own transpilation configurations. when we setup jest we have to setup babel config for jest these will conflicts eachother that's why we disabled the default babel config.
+
+ 
