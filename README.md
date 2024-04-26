@@ -374,7 +374,3 @@ form the list we deleted an element.
 
 - We need hooks because normal js identifies does not works as we expect them to work.
 - thats why we need react hooks that provide more features.
-
-# Exploring The World - 06
-
-# Assignment
